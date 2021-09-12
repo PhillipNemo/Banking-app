@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./image/iconfont/icofont/icofont/icofont.min.css">
+    <title>synchronic bank</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div id="splash">
+
+    <div class="icon-logo">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+    </div>
+    <p>Synchronic Bank</p>
+    <div class="progress">
+        <div class="indicator"></div>
+    </div>
+</div>
+
+            <div id="app">
+                    <!-- logo -->
+                <nav id="nav">
+                    <a id="logo" href="index.html">
+                        <div class="icon-logo">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                        </div>
+                        <span>Synchronic</span>
+
+                    </a>
+
+                        <!-- text -->
+                        <div class="profile">
+                            <h3 id="balance">235,700,000,000</h3>
+
+                            <div class="image">
+                                <img src="./image/FB_IMG_15331409133123362.jpg" width="100%" height="100%"alt="">
+                                <div class="online"></div>
+                            </div>
+                        </div>
+                </nav>
+
+                    <!-- main -->
+                <main id="main">
+                    <section id="stats">
+                        <div class="stat-box">
+                            <h1>Users</h1>
+                            <h2>32K</h2>
+                            <i id="icon-1" class="icofont-love"></i>
+                            <i id="icon-2" class="icofont-love"></i>
+                        </div>
+                        <div class="stat-box">
+                            <h1>Active</h1>
+                            <h2>11K</h2>
+                            <i id="icon-1" class="icofont-love"></i>
+                            <i id="icon-2" class="icofont-love"></i>
+                        </div>
+                        <div class="stat-box">
+                            <h1>Transactions</h1>
+                            <h2>89K</h2>
+                            <i id="icon-1" class="icofont-love"></i>
+                            <i id="icon-2" class="icofont-love"></i>
+
+                        </div>
+                        <div class="stat-box">
+                            <h1>Transfers</h1>
+                            <h2>9K</h2>
+                            <i id="icon-1" class="icofont-love"></i>
+                            <i id="icon-2" class="icofont-love"></i>
+
+                        </div>
+                        <div class="stat-box">
+                            <h1>Online</h1>
+                            <h2>15K</h2>
+                            <i id="icon-1" class="icofont-love"></i>
+                            <i id="icon-2" class="icofont-love"></i>
+
+                        </div>
+                        <div class="stat-box">
+                            <h1>Subscribers</h1>
+                            <h2>32K</h2>
+                            <i id="icon-1" class="icofont-love"></i>
+                            <i id="icon-2" class="icofont-love"></i>
+
+                        </div>
+                    
+                    </section>
+            <!-- Actions -->
+                        <section id="actions">
+                            <h2>Actions</h2>
+                            <div class="action-group">
+                                <button id="create" onclick="createAcctBtn()">Create an Account </button>
+                                <button id="update" onclick="depositeMoney ()">Transfer/withdrawal</button>
+                                <button id="customer" onclick="customerCare()">Customer Care</button>
+                            
+                            </div>
+                        </section>
+
+
+                       <section id="transactions">
+                            <h2>Transactions</h2>
+                            <div style="overflow-x:auto">
+                            <table id="table">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Account Number</th>
+                                    <th>Amount</th>
+                                    <th>Type</th>
+                                    <th>Date/Time</th>
+                                    <th>Remark/Comment</th>
+                                </tr> 
+                                <tr>
+                                    <td>Phillip Okere</td>
+                                    <td>00087664431 </td>
+                                    <td>$3500</td>
+                                    <td>Transfer</td>
+                                    <td>Sun Jul 04 2021 00:07:03 GMT+0100 (West Africa Standard Time)</td>
+                                    <td>For Gucci Bag</td>
+                                </tr>
+                            
+
+                            </table> 
+                        </div>
+                        </section>
+                    </main>
+                        <!-- form section -->
+
+                        <section id="CreateAcctForm">
+
+                            <form>
+                                <h2>CREATE AN ACCOUNT</h2> 
+                                <p>Fill out this form to create an account with us </p>
+                                    <input type="text" placeholder="Full Name" required><br>
+                                    <input type="text" placeholder="Address"><br>          
+                                    <input type="text" placeholder="Contact"><br>
+                                
+                
+                                    <input type="date" placeholder="">
+                                    <select>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                    </select><br>
+
+                            
+                                    <select>
+                                        <option>Single</option>
+                                        <option>Married</option>
+                                        <option>Divorced</option>
+                                    </select><br>
+
+                                    <input type="text" placeholder="Nationality" required><br>      
+                                    <input type="text" placeholder="Local Government" required ><br>
+
+                                    <div class="createbtm">
+                                        <input type="checkbox"><p> <a href="#">Accept all terms and condition.</a> </p>
+                                        <button id="closebtn" onclick="closeBtn ()">Create</button>
+                                    </div> 
+
+                            </form>
+                        </section>
+
+
+
+                        <section id="transferAcctForm">
+                            
+                            <form action="">
+                                <h2> WITHDRAW / TRANSFER FORM</h2>
+                                    <input id="Fname" type="text" placeholder="Full Name " required>
+                                    <input id="acctNum" type="text" placeholder="Account Number "><br>
+                                    <input id="amount" type="text" placeholder=" Amount"><br>
+                                    <input id="transType" type="text" placeholder="Type(transfer/withdraw) "><br>
+                                    <input id="remark" type="text" placeholder=" Remark"><br>
+                                    <button id="transactionsbtn">Submit</button>
+                                    <p onclick="backbtn()" id="backbtn">Back</p>
+
+                            </form>
+                        </section>
+
+                        <section id="customer-care">
+                            <h2>CUSTOMER CARE</h2>
+                            <p id="intro">orem ipsum dolor sit amet consectetur adipisicing elit. Officia dolorum corporis magnam consequuntur dolores nulla ea unde impedit magni rem sapiente error maxime asperiores doloribus excepturi saepe modi adipisci, quod a? Placeat explicabo tempore temporibus incidunt similique atque dolorum asperiores sunt, totam molestiae molestias dignissimos exercitationem esse nostrum blanditiis numquam.
+
+                            Officia dolorum corporis magnam consequuntur dolores nulla ea unde impedit magni rem sapiente error maxime asperiores doloribus excepturi saepe modi adipisci, quod a? Placeat explicabo tempore temporibus incidunt similique atque dolorum asperiores sunt, totam molestiae molestias dignissimos exercitationem esse nostrum blanditiis numquam.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia dolorum corporis magnam consequuntur dolores nulla ea unde impedit magni rem sapiente error maxime asperiores doloribus excepturi saepe modi adipisci, quod a? Placeat explicabo tempore temporibus incidunt similique atque dolorum asperiores sunt, totam molestiae molestias dignissimos exercitationem esse nostrum blanditiis numquam.
+
+                            Officia dolorum corporis magnam consequuntur dolores nulla ea unde impedit magni rem sapiente error maxime asperiores doloribus excepturi saepe modi adipisci, quod a? Placeat explicabo tempore temporibus incidunt similique atque dolorum asperiores sunt, totam molestiae molestias dignissimos exercitationem esse nostrum blanditiis numquam. 07087664431
+                            </p>
+                            <p onclick="backbtn()" id="backbtn">←</p>
+
+                        </section>
+                
+            </div>
+
+
+
+
+    <script src="./app.js"></script>
+</body>
+</html>

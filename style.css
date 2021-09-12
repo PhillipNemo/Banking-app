@@ -1,0 +1,573 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+*{
+    margin:0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'lato',sans-serif;
+    text-decoration: none;
+}
+#splash{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(155, 169, 180);
+}
+.icon-logo{
+    position: relative;
+    background-color: aqua;
+    width: 100px;
+    height: 70px;
+    margin-bottom: 10px;
+}
+.icon-logo div{
+    width: 10px ;
+    height: 45px;
+    margin-left: 40px;
+    border-radius: 10px;
+    position: absolute;
+    background-color: rgb(236, 215, 22);
+    transform: rotate(40deg);
+    animation:logo 1s infinite alternate ;
+    
+}
+
+.icon-logo .bar1{
+    left: 10px;
+    top: 20px;
+}
+#splash .text{
+    margin: 10px;
+    font-size:20px ;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#splash .progress{
+    background-color: #eeee;
+    width: 280px;
+    height: 3px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 10px 0px;
+    position: relative;
+}
+#splash .progress .indicator{
+    width: 10%;
+    height: 100%;
+    background-color: rgb(20, 20, 19);
+    border: 1px solid gold;
+    position: absolute;
+    transition: 0.5s;
+}
+#app{
+    opacity: 0;
+    transition: 0.8s;
+    position: relative;
+}
+nav .icon-logo{
+    background-color: transparent;
+}
+
+nav .icon-logo div{
+    animation: none;
+}
+nav .icon-logo .bar1{
+    top:15%;
+}
+
+nav #logo{
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    align-items: center;
+}
+nav .profile{
+    position: relative;
+    cursor: pointer;
+    margin: 0% 20px;
+    display: flex;
+}
+
+nav .profile .image{
+    background-color: #24252a;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+nav h3{
+    margin-left: auto;
+}
+nav a{
+    display: flex;
+    align-items: center;
+    font-style: italic;
+    font-size: 30px;
+    font-weight: 900;
+    text-decoration: none;
+    color: black;
+}
+nav a span{
+   font-style: italic;
+   font-size: 30px;
+   font-weight: 900;
+   margin-left: -40px;
+}
+nav {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding:10px 5% ;
+    background: linear-gradient(to left, transparent,#eee,rgb(255, 240, 156),transparent);
+}
+nav .profile .online{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: -1px;
+    right: -1px;
+}
+nav .profile .online::after{
+    content: '';
+    width:5px;
+    height:5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: mediumseagreen;
+    border-radius: 50%;
+}
+
+main{
+    position: relative;
+    padding: 20px;
+    visibility:visible ;
+}
+section#stats::-webkit-scrollbar{
+    width: 0%;
+}
+
+section#stats{
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y:hidden;
+}
+
+section#stats .stat-box #icon-1, 
+section#stats .stat-box #icon-2{
+    visibility: hidden;
+    position: absolute;
+    right: 12px;
+    bottom: 20px;
+}
+
+section#stats .stat-box:hover #icon-1{
+    visibility: visible;
+    color: gold;
+    right: 30px;
+}
+section#stats .stat-box:hover #icon-2{
+    visibility: visible;
+    color: gold;
+}
+
+section#stats .stat-box{
+    display: inline-block;
+    width: 250px;
+    height: 180px;
+    background-color: #000;
+    border-radius: 10px;
+    margin: 5px;
+    color:#fff ;
+    padding: 20px;
+    position: relative;
+}
+section#stats .stat-box h2{
+    font-size: 80px;
+    color: rgb(164, 172, 124);
+}
+section#stats .stat-box h2:hover{
+    color: gold;
+}
+
+
+section#stats .stat-box h1{
+    position: absolute;
+    bottom: 20px;
+    opacity: 0.7;
+}
+section#actions{
+    margin: 20px 0px;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section#actions .actiongroup{
+    margin: 10px;
+}
+section#actions button:hover{
+        background-color:dodgerblue;
+}
+section#actions button{
+    width: 180px;
+    height: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 5px;
+    background-color: rgb(145, 143, 77);
+    color: #fff;
+    font-size: 17px;
+    border-radius: 20px;    
+}
+section#transactions table{
+    border-style: collapse;
+    width: 100%;
+}
+
+section#transactions :is(th, td){
+    padding: 10px;
+    text-align: left;
+}
+
+section#transactions tr:nth-of-type(odd){
+    background-color: #eeee;
+}
+section#transactions tr:nth-of-type(even){
+    background-color: rgb(234, 245, 188);
+
+}
+section#CreateAcctForm{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 90vh;
+    background-color: #fff;
+    width: 30%;
+    position: absolute;
+    background-color: rgb(248, 245, 245);
+    border-top: 3px solid gold;
+    border-bottom: 3px solid gold;
+    top: 5%;
+    margin-left:35%;
+    display: none;
+    animation: slide 1s forwards;
+    transition: 0.8s ease-in;
+   
+}
+section#CreateAcctForm form{
+    width: 90%;
+    padding-left:20px;
+}
+section#CreateAcctForm form h2{
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 5px;
+
+}
+
+section#CreateAcctForm form p{
+    text-align: center;
+}
+
+section#CreateAcctForm form input{
+    padding: 5px;
+    width: 90%;
+    margin: 5px;
+    border: none;
+    outline: none;
+    border: 1px solid rgb(196, 193, 33);
+}
+section#CreateAcctForm .createbtm{
+    display: flex;
+    align-items: center;
+}
+
+
+section#CreateAcctForm .createbtm input, p{
+    width: auto;
+}
+
+section#CreateAcctForm .createbtm p{
+    width: auto;
+    margin-right:auto ;
+}
+
+
+section#CreateAcctForm form button:hover,
+section#transferAcctForm form button:hover,
+section#withdrawAcctForm form button:hover{
+    background-color:dodgerblue;
+}
+
+section#CreateAcctForm form button{
+    width: 180px;
+    height: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: rgb(145, 143, 77);
+    color: #fff;
+    font-size: 17px;
+    border-radius: 20px;
+    width:20%;    
+}
+section#CreateAcctForm form select{
+    width: 90%;
+    height: 30px;
+    border: none;
+    outline: none;
+    border: 1px solid rgb(196, 193, 33);
+    margin: 15px 12px;
+}
+
+section#transferAcctForm{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 70vh;
+    background-color: rgb(248, 245, 245);
+    border-top: 3px solid gold;
+    border-bottom: 3px solid gold;
+    position: absolute;
+    width: 30%;
+    top: 5%;
+    margin-left:35%;
+    display: none;
+    animation: slide 1s forwards;
+    transition: 0.8s ease-in;
+}
+section#transferAcctForm form{
+    width: 80%;
+    padding: 5px;
+    margin:50px 0px 0px 40px;
+}
+section#transferAcctForm form input{
+    padding: 5px;
+    margin: 15px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border: 1px solid rgb(196, 193, 33);
+
+}
+section#transferAcctForm form h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+ section#transferAcctForm form button{
+    width: 180px;
+    height: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: rgb(145, 143, 77);
+    color: #fff;
+    font-size: 17px;
+    border-radius: 20px;
+    width:100%;    
+}
+
+section#transferAcctForm p,
+ section#customer-care p#backbtn{
+    font-size: 20px;
+    color:#000;
+    background-color:rgb(243, 220, 93);
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top:0%;
+    left: 0px;
+    transition: 1s;
+ }
+ section#transferAcctForm p:hover,
+ section#customer-care p#backbtn:hover{
+     background:linear-gradient(to top right,rgb(247, 225, 100) ,rgb(87, 81, 81), rgb(230, 213, 118));
+ }
+    
+section#customer-care{
+    margin: 10%;
+    text-align: start;
+    display: none;
+    position: absolute;
+    top: -20px;
+    left:20px ;
+}
+
+section#customer-care h2{
+    text-align: center;
+    font-family: cursive;
+    margin-bottom: 20px;
+}
+section#customer-care p{
+    font-size: 1.1rem;
+}
+section#customer-care p#intro::before{
+    content: 'L';
+    font-size: 2rem;
+    font-weight: bold;
+    color: gold;
+}
+ @keyframes logo {
+     from{opacity:0;}
+     to{opacity:1;}
+ }
+
+ @media screen and (max-width:700px){
+     
+    section#actions button{
+        transform: translateX(70px);
+        font-size: 0.9rem;
+    }
+    nav{
+        flex-wrap:wrap;
+    }
+    
+
+    section#CreateAcctForm form input,
+    section#transferAcctForm form input{
+        margin:5px;
+        width: 100%;
+    }
+    section#CreateAcctForm{
+        height:auto;
+        width:90%;
+        margin-left: 20px;
+    }
+    section#transferAcctForm{
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        width:90%;
+        margin-left: 20px;
+
+    }
+   
+    section#transferAcctForm form{
+        height: 60vh;
+        margin-left: 40px;
+    }
+    
+    section#CreateAcctForm form button{
+        width: 100%;
+    }
+    #actions h2{
+        text-align: center;
+        display: none;
+    }
+    section#actions button{
+        width: 50%;
+        padding:10px;
+    }
+    section#customer-care{
+        margin-top: 40%;
+    }
+   }
+
+@media screen and (max-width:1024px){
+
+   section#CreateAcctForm{
+    height:auto;
+    width:90%;
+    margin-left: 45px;
+    padding: 20px 0;
+  }
+section#transferAcctForm{
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    width:90%;
+    margin-left: 45px;
+    padding: 20px 0;
+
+  }
+  section#customer-care{
+    margin-top: 20%;
+}
+section#CreateAcctForm form input,
+section#transferAcctForm form input{
+    height: 40px;
+    margin:5px;
+    width: 100%;
+}
+}
+@media screen and (max-width:480px){
+
+   section#CreateAcctForm{
+    height:auto;
+    width:90%;
+    margin-left: 20px;
+    padding: 20px 0;
+  }
+section#transferAcctForm{
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    width:90%;
+    margin-left: 30px;
+    padding: 20px 0;
+
+  }
+  section#customer-care{
+    margin-top: 45%;
+}
+section#customer-care h2{
+    font-size: 1rem;
+}
+
+section#CreateAcctForm form input,
+section#transferAcctForm form input{
+    height: 40px;
+    margin:5px;
+    width: 100%;
+}
+}
+
+@media screen and (max-width:375px){
+    section#actions button{
+        font-size: .7rem;
+        padding: 10px;
+    }
+    section#customer-care{
+        margin-top: 50%;
+    }
+    section#customer-care h2{
+        font-size: 1rem;
+    }
+    section#CreateAcctForm{
+        height:auto;
+        width:90%;
+        margin-left: 13px;
+        padding: 20px 0;
+      }
+    section#transferAcctForm{
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        width:90%;
+        margin-left: 13px;
+        padding: 20px 0;
+    
+      }
+      section#CreateAcctForm,
+      section#transferAcctForm form{
+        margin:50px 0px 0px 20px;
+    }
+}
+ @keyframes slide{
+     from{left: -35%;}
+     to{left:0px}
+ }
