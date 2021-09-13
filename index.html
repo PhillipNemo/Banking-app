@@ -94,7 +94,8 @@
                             <h2>Actions</h2>
                             <div class="action-group">
                                 <button id="create" onclick="createAcctBtn()">Create an Account </button>
-                                <button id="update" onclick="depositeMoney ()">Transfer/withdrawal</button>
+                                <button id="update" onclick="depositeMoney ()">Transfer</button>
+                                <button id="customer" onclick="depositeMoney ()">Withdraw</button>
                                 <button id="customer" onclick="customerCare()">Customer Care</button>
                             
                             </div>
@@ -138,19 +139,21 @@
                                     <input type="text" placeholder="Address"><br>          
                                     <input type="text" placeholder="Contact"><br>
                                 
-                
-                                    <input type="date" placeholder="">
-                                    <select>
-                                        <option>Male</option>
-                                        <option>Female</option>
-                                    </select><br>
+                                    <div class="select-section">
+                                        <select>
+                                            <option>Gender</option>
+                                            <option>Male</option>
+                                            <option>Female</option>
+                                        </select>
 
-                            
-                                    <select>
-                                        <option>Single</option>
-                                        <option>Married</option>
-                                        <option>Divorced</option>
-                                    </select><br>
+                                        <select>
+                                            <option disabled >Status</option>
+                                            <option>Single</option>
+                                            <option>Married</option>
+                                            <option>Divorced</option>
+                                        </select>
+                                    </div>
+                                    <br>
 
                                     <input type="text" placeholder="Nationality" required><br>      
                                     <input type="text" placeholder="Local Government" required ><br>
