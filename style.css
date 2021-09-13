@@ -250,26 +250,24 @@ section#transactions tr:nth-of-type(even){
 
 }
 section#CreateAcctForm{
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    height: 90vh;
     background-color: #fff;
-    width: 30%;
+    width: 50%;
     position: absolute;
     background-color: rgb(248, 245, 245);
     border-top: 3px solid gold;
     border-bottom: 3px solid gold;
-    top: 5%;
-    margin-left:35%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     display: none;
     animation: slide 1s forwards;
     transition: 0.8s ease-in;
-   
+
 }
 section#CreateAcctForm form{
     width: 90%;
-    padding-left:20px;
+    margin: 0 auto;
+    padding:10px 0 ;
 }
 section#CreateAcctForm form h2{
     text-align: center;
@@ -280,6 +278,7 @@ section#CreateAcctForm form h2{
 
 section#CreateAcctForm form p{
     text-align: center;
+    margin: 10px 0;
 }
 
 section#CreateAcctForm form input{
@@ -325,38 +324,41 @@ section#CreateAcctForm form button{
     width:20%;    
 }
 section#CreateAcctForm form select{
-    width: 90%;
+    width: 100%;
     height: 30px;
     border: none;
     outline: none;
     border: 1px solid rgb(196, 193, 33);
-    margin: 15px 12px;
+    margin: 5px 10px;
 }
-
+section#CreateAcctForm form .select-section{
+     display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    
+}
 section#transferAcctForm{
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    height: 70vh;
+    background-color: #fff;
+    width: 50%;
+    position: absolute;
     background-color: rgb(248, 245, 245);
     border-top: 3px solid gold;
     border-bottom: 3px solid gold;
-    position: absolute;
-    width: 30%;
-    top: 5%;
-    margin-left:35%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     display: none;
     animation: slide 1s forwards;
     transition: 0.8s ease-in;
+
 }
 section#transferAcctForm form{
-    width: 80%;
-    padding: 5px;
-    margin:50px 0px 0px 40px;
+    width: 90%;
+    margin: 10px auto;
 }
 section#transferAcctForm form input{
     padding: 5px;
-    margin: 15px;
+    margin: 15px 0;
     width: 100%;
     border: none;
     outline: none;
@@ -366,6 +368,7 @@ section#transferAcctForm form input{
 section#transferAcctForm form h2{
     text-align: center;
     margin-bottom: 10px;
+    font-size: 1.9rem;
 }
 
  section#transferAcctForm form button{
@@ -424,45 +427,78 @@ section#customer-care p#intro::before{
  @keyframes logo {
      from{opacity:0;}
      to{opacity:1;}
- }
+    }
 
- @media screen and (max-width:700px){
-     
-    section#actions button{
-        transform: translateX(70px);
-        font-size: 0.9rem;
+    @keyframes slide{
+        from{left: -50%;}
+        to{left:50%}
+    }
+    
+@media screen and (max-width:1024px){
+    
+       section#CreateAcctForm,
+       section#transferAcctForm{
+        height:auto;
+        width:70%;
+        padding: 20px 0;
+      }
+      section#actions .action-group{
+          width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        align-content: center;
+        grid-column-gap:25px ;
+      }
+
+      #actions h2{
+        text-align: center;
+        display: none;
+    }
+      section#CreateAcctForm form button{
+        width: 50%;
+        margin:10px 0;
+
+    }
+      section#customer-care{
+        margin-top: 20%;
+    }
+    section#CreateAcctForm form input,
+    section#transferAcctForm form input{
+        height: 40px;
+        margin:5px;
+        width: 100%;
+    }
+}
+
+ @media screen and (max-width:900px){
+   
+    section#actions .action-group{
+       grid-template-columns: 1fr 1fr;
+    } 
+    section#actions .action-group button{
+        width: 100%;
     }
     nav{
         flex-wrap:wrap;
     }
-    
-
     section#CreateAcctForm form input,
     section#transferAcctForm form input{
-        margin:5px;
+        margin:10px;
         width: 100%;
     }
-    section#CreateAcctForm{
-        height:auto;
-        width:90%;
-        margin-left: 20px;
-    }
+    section#CreateAcctForm,
     section#transferAcctForm{
-        height: auto;
-        justify-content: center;
-        align-items: center;
         width:90%;
-        margin-left: 20px;
-
     }
-   
+    
     section#transferAcctForm form{
-        height: 60vh;
-        margin-left: 40px;
+        height: auto;
+        padding: 10px;
     }
     
     section#CreateAcctForm form button{
-        width: 100%;
+        width: 50%;
+        margin:10px 0;
     }
     #actions h2{
         text-align: center;
@@ -477,56 +513,22 @@ section#customer-care p#intro::before{
     }
    }
 
-@media screen and (max-width:1024px){
-
-   section#CreateAcctForm{
-    height:auto;
-    width:90%;
-    margin-left: 45px;
-    padding: 20px 0;
-  }
-section#transferAcctForm{
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    width:90%;
-    margin-left: 45px;
-    padding: 20px 0;
-
-  }
-  section#customer-care{
-    margin-top: 20%;
-}
-section#CreateAcctForm form input,
-section#transferAcctForm form input{
-    height: 40px;
-    margin:5px;
-    width: 100%;
-}
-}
 @media screen and (max-width:480px){
-
-   section#CreateAcctForm{
-    height:auto;
-    width:90%;
-    margin-left: 20px;
-    padding: 20px 0;
-  }
-section#transferAcctForm{
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    width:90%;
-    margin-left: 30px;
-    padding: 20px 0;
-
-  }
   section#customer-care{
     margin-top: 45%;
+}
+section#actions .action-group{
+    width: 100%;
+    grid-template-columns: 1fr;
+    justify-items: center;
 }
 section#customer-care h2{
     font-size: 1rem;
 }
+section#CreateAcctForm,
+    section#transferAcctForm{
+        margin-top: -60px;
+    }
 
 section#CreateAcctForm form input,
 section#transferAcctForm form input{
@@ -547,27 +549,4 @@ section#transferAcctForm form input{
     section#customer-care h2{
         font-size: 1rem;
     }
-    section#CreateAcctForm{
-        height:auto;
-        width:90%;
-        margin-left: 13px;
-        padding: 20px 0;
-      }
-    section#transferAcctForm{
-        height: 100vh;
-        justify-content: center;
-        align-items: center;
-        width:90%;
-        margin-left: 13px;
-        padding: 20px 0;
-    
-      }
-      section#CreateAcctForm,
-      section#transferAcctForm form{
-        margin:50px 0px 0px 20px;
-    }
 }
- @keyframes slide{
-     from{left: -35%;}
-     to{left:0px}
- }
